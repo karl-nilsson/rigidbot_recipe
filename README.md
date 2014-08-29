@@ -3,11 +3,22 @@ Installing Garcad's hotend on a RigidBot
 
 # Hardware
 
-1. Connect MAX6675 board to RigidBoard
-   * +5V -> +5V
+1. Using a set of female-female jumper cables, connect MAX6675 board to RigidBoard
+   * Use either the ICSP header, or the LCD header
+   * Connect like colors (e.g. VCC -> VCC, MISO -> MISO, etc...)  
 
 ![RigidBoard](/img/rigidboard.png)
 ![MAX6675](/img/MAX6675.png)
+
+2. Cut a 6" length of heavy-gauge wire to use as the heater cable
+
+3. Solder the heater cable to the extruder board as indicated in the photograph.
+  * polarity doesn't matter
+  * if necessary, use a hot glue gun to insulate the connections
+
+![heater connection](/img/heater_connx.jpg)
+
+3. Connect the heater wires to the solderless terminals, and connect them to the hotend posts
 
 
 # Software
@@ -21,7 +32,7 @@ Installing Garcad's hotend on a RigidBot
    
    https://github.com/karl-nilsson/Marlin/archive/Marlin_v1.zip
 
-3. Open with Arduino IDE
+3. Extract zip file and open "Marlin/Marlin.ino" (this should launch the Arduino IDE)
 
 4. Navigate to Configuration.h
    * if you have a RigidBot Big, uncomment line #6
@@ -36,11 +47,22 @@ http://rollertrol.com/RollerNode/program/Arduino-blink-test-program-upload-296x1
 
 # Printer Control
 
-The RigidBoard uses a baud rate of 115200, so be sure to 
-Additionally, you can use the Arduino IDE to watch the serial connection. Tools -> Serial Monitor. Make sure the baud rate is set correctly (dropdown box in lower-right hand corner)
+* The RigidBoard uses a baud rate of 115200, change settings as necessary
+* Use the Arduino IDE's serial monitor as a debugging tool
+  * Tools -> Serial Monitor (alternatively, CTRL+SHIFT+M)
+  * 115200 Baud (lower-right hand corner)
+  * Use the input box at the top of the window to send commands (i.e. [GCode][http://reprap.org/wiki/Mendel_User_Manual:_RepRapGCodes])
 
 
 
 # Caveats/Details/Etc.
+There are a number of quirks in the RigidBoard Design:
+  * The ICSP headers are reversed
+  * The SS pin is tied to +5V (making standard SPI impossible)
+  * The 6675 board does not currently work in conjunction with the LCD addon.
 
-Unfortunately, the RigidBoard does not play nicely with the 6675 board. For reasons unknown, the SS pin is tied to 5V, so standard SPI becomes impossible (we use the MOSI pin instead). Additionally, the 6675 board does not currently work in conjunction with the LCD addon. Finally, the Marlin codebase does not currently support multiple thermocouple amplifiers, so dual hotends won't work.
+Additionally, the Marlin codebase does not currently support multiple thermocouple amplifiers, so dual hotends won't work.
+
+The RigidBoard image comes courtesy of Dennis Brown
+https://plus.google.com/u/0/102831253296337169949/posts/eyavMevqVBF
+
