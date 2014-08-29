@@ -43,7 +43,7 @@ Installing Garcad's hotend on a RigidBot
    * Tools -> Serial Port -> (/dev/ACM0 on linux or /dev/COM# on windows)
 
 6. Verify and Upload firmware
-http://rollertrol.com/RollerNode/program/Arduino-blink-test-program-upload-296x194.jpg
+![arduino upload icon](http://rollertrol.com/RollerNode/program/Arduino-blink-test-program-upload-296x194.jpg)
 
 # Printer Control
 
