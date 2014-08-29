@@ -1,24 +1,40 @@
 Installing Garcad's hotend on a RigidBot
 ===============
 
-# Hardware
+# HARDWARE
+
+## MAX6675
 
 1. Using a set of female-female jumper cables, connect MAX6675 board to RigidBoard
-   * Use either the ICSP header, or the LCD header
+   * Use **either** the ICSP header, or the LCD header
    * Connect like colors (e.g. VCC -> VCC, MISO -> MISO, etc...)  
 
    ![RigidBoard](/img/rigidboard.png)
    ![MAX6675](/img/MAX6675.png)
 
-2. Cut a 6" length of heavy-gauge wire to use as the heater cable
+## Heater Cable
 
-3. Solder the heater cable to the extruder board as indicated in the photograph.
+1. Cut a 6" length of heavy-gauge wire to use as the heater cable
+
+2. Solder the heater cable to the extruder board as indicated in the photograph.
   * polarity doesn't matter
   * if necessary, use a hot glue gun to insulate the connections
 
   ![heater connection](/img/heater_connx.jpg)
 
-4. Connect the heater wires to the solderless terminals, and connect them to the hotend posts
+3. Connect the heater wires to the solderless terminals
+  * slide the heater wire through the hole
+  * wrap the wire around the tube
+  * solder the wire into the hole
+
+  INSERT PICTURE
+
+4. Crimp the face of the solderless terminal
+
+  INSERT PICTURE
+
+5. Slide the solderless terminals to the hotend posts
+   * **WARNING: DO NOT SOLDER THE TERMINALS TO THE HOTEND POSTS**
 
 
 # Software
@@ -52,7 +68,7 @@ Installing Garcad's hotend on a RigidBot
 * Use the Arduino IDE's serial monitor as a debugging tool
   * Tools -> Serial Monitor (alternatively, CTRL+SHIFT+M)
   * 115200 Baud (lower-right hand corner)
-  * Use the input box at the top of the window to send commands (i.e. [GCode][http://reprap.org/wiki/Mendel_User_Manual:_RepRapGCodes])
+  * Use the input box at the top of the window to send commands (i.e. [GCode](http://reprap.org/wiki/Mendel_User_Manual:_RepRapGCodes))
 
 
 
