@@ -7,8 +7,8 @@ Installing Garcad's hotend on a RigidBot
    * Use either the ICSP header, or the LCD header
    * Connect like colors (e.g. VCC -> VCC, MISO -> MISO, etc...)  
 
-![RigidBoard](/img/rigidboard.png)
-![MAX6675](/img/MAX6675.png)
+   ![RigidBoard](/img/rigidboard.png)
+   ![MAX6675](/img/MAX6675.png)
 
 2. Cut a 6" length of heavy-gauge wire to use as the heater cable
 
@@ -16,9 +16,9 @@ Installing Garcad's hotend on a RigidBot
   * polarity doesn't matter
   * if necessary, use a hot glue gun to insulate the connections
 
-![heater connection](/img/heater_connx.jpg)
+  ![heater connection](/img/heater_connx.jpg)
 
-3. Connect the heater wires to the solderless terminals, and connect them to the hotend posts
+4. Connect the heater wires to the solderless terminals, and connect them to the hotend posts
 
 
 # Software
@@ -43,7 +43,8 @@ Installing Garcad's hotend on a RigidBot
    * Tools -> Serial Port -> (/dev/ACM0 on linux or /dev/COM# on windows)
 
 6. Verify and Upload firmware
-![arduino upload icon](http://rollertrol.com/RollerNode/program/Arduino-blink-test-program-upload-296x194.jpg)
+
+   ![arduino upload icon](http://rollertrol.com/RollerNode/program/Arduino-blink-test-program-upload-296x194.jpg)
 
 # Printer Control
 
