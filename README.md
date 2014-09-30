@@ -33,7 +33,7 @@ Installing Garcad's hotend on a RigidBot
 
   INSERT PICTURE
 
-5. Slide the solderless terminals to the hotend posts
+5. Slide the solderless terminals onto the hotend posts
    * **WARNING: DO NOT SOLDER THE TERMINALS TO THE HOTEND POSTS**
 
 
